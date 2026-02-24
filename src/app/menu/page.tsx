@@ -11,7 +11,8 @@ export default function Menu() {
     const [editForm, setEditForm] = useState(userData);
     const fileInputRef = useRef<HTMLInputElement>(null);
 
-    const sections = [
+    type MenuItem = { label: string; icon: any; color: string; action?: () => void };
+    const sections: { title: string; items: MenuItem[] }[] = [
         {
             title: "ACCOUNT PREFERENCES",
             items: [
